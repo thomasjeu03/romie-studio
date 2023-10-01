@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Fantome';
+  src: url('../../../src/assets/fonts/Fantome.otf') format('opentype');
+  font-style: normal;
+  font-display: swap
+}
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('../../../src/assets/fonts/ClashDisplay.otf') format('opentype');
+  font-style: normal;
+  font-display: swap
+}
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('../../../src/assets/fonts/NeueHaasDisplay.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap
+}
+
+:root{
+  --aesthetic-font: 'Fantome', serif;
+  --title-font: 'ClashDisplay', serif;
+  --text-font: 'NeueHaasDisplay' , serif;
+
+  --font-size: 16px;
+  @media only screen and (max-width: 900px){
+    --font-size: 14px;
+  }
+}
+
+.aesthetic_title{
+  font-family: var(--aesthetic-font);
+  text-transform: uppercase;
+  font-size: var(--6m);
+  line-height: normal;
+  text-align: center;
+}
+
+.titre2, h2{
+  font-size: var(--6m);
+  line-height: normal;
+  font-family: var(--title-font);
+}
+.titre3, h3{
+  font-size: var(--4m);
+  line-height: normal;
+  font-family: var(--title-font);
+}
+@media only screen and (max-width: 900px){
+  .aesthetic_title{
+    font-size: var(--5m);
+  }
+  .titre2, h2{
+    font-size: var(--5m);
+  }
+  .titre3, h3{
+    font-size: var(--3m);
+  }
+}
+@media only screen and (max-width: 600px){
+  .aesthetic_title{
+    font-size: var(--4m);
+  }
+  .titre2, h2{
+    font-size: var(--4m);
+  }
+  .titre3, h3{
+    font-size: var(--2m);
+  }
+}

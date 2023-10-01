@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+}
+*:focus{
+  outline: none;
+}
+::selection {
+  background: rgba(var(--black-rgb), 0.5);
+  color: rgba(var(--white-rgb), 1);
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+html{
+  font-family: var(--text-font);
+  font-size: var(--font-size);
+  color: var(--black);
+  background: var(--white);
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body{
+  cursor: none;
+  @media only screen and (max-width: 500px){
+    cursor: initial;
+  }
+}
+figure{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+p{
+  white-space: pre-line;
+}
+Link{
+  cursor: pointer;
+  color: var(--primary);
+}
+input,textarea, .input,select{
+  background: none;
+  outline: none;
+  border: var(--border);
+  border-radius: var(--1m);
+  width: 100%;
+  padding: var(--2m) var(--4m);
+  position: relative;
+}
+button{
+  background: none;
+  border: var(--border);
+  color: var(--primary);
+  outline: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: var(--1m);
+  padding: var(--2m) var(--4m);
+  cursor: pointer;
+}
+li{
+  list-style-type: none;
+}
+a{
+  width: fit-content;
+  color: var(--primary);
+}
+.noise{
+  background-image: url(../../../src/assets/img/noise.png);
+  background-repeat: repeat;
+  position: fixed;
+  z-index: 5000;
+  width: 300%;
+  height: 300%;
+  left: -100%;
+  top: -100%;
+  pointer-events: none;
+  will-change: transform;
+  animation: 6s steps(10) 0s infinite normal none running noise_grain__3Y1xm;
+}
+@keyframes noise_grain__3Y1xm {
+  10%{
+    transform: translate(20%, -15%);
+  }
+  20%{
+    transform: translate(20%, -5%);
+  }
+  30%{
+    transform: translate(-20%, -5%);
+  }
+  40%{
+    transform: translate(20%, 5%);
+  }
+  50%{
+    transform: translate(-20%, 5%);
+  }
+  60%{
+    transform: translate(20%, 15%);
+  }
+  70%{
+    transform: translate(-20%, 15%);
+  }
+  80%{
+    transform: translate(20%, 5%);
+  }
+  90%{
+    transform: translate(-20%, 5%);
+  }
+  100%{
+    transform: translate(20%, -15%);
+  }
+}

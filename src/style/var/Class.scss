@@ -1,0 +1,223 @@
+.CTA{
+  border-radius: var(--1m);
+  border: 3px solid var(--primary);
+  padding: var(--2m) var(--4m);
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--1m);
+  text-decoration: none;
+  letter-spacing: .5px;
+  color: var(--primary);
+  &_blue{
+    color: var(--white);
+    background: var(--primary);
+  }
+  &_pink{
+    color: var(--primary);
+    background: var(--secondary);
+  }
+  &:hover{
+    color: var(--primary);
+    background: none;
+    border: 3px solid var(--primary);
+    letter-spacing: 1px;
+  }
+  &_disable, &_disable:hover{
+    color: var(--grey);
+    background: var(--white);
+    filter: blur(4px);
+    cursor: not-allowed;
+    border: 3px solid var(--grey);
+  }
+  &_danger{
+    color: var(--danger);
+    border: 3px solid var(--danger);
+    &:hover{
+      color: var(--white);
+      background: var(--danger);
+      border: 3px solid var(--danger);
+    }
+  }
+  @media only screen and (max-width: 900px){
+    padding: var(--1m) var(--2m);
+    gap: var(--05m);
+  }
+}
+
+.hover-effect{
+  transform-style: preserve-3d;
+  position: relative;
+  color: var(--primary);
+  cursor: pointer;
+  div{
+    pointer-events: none;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: transform .4s;
+    &>span{
+      display: block;
+      transform-origin: top center;
+      transform-style: preserve-3d;
+      transition: opacity .4s,color .4s,transform .4s;
+    }
+    &>span:first-child{
+      transform: rotateX(0deg) translate3d(0,0%,0);
+    }
+    &>span:nth-child(2){
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      color: var(--primary);
+      transform: rotateX(-90deg) translate3d(0,50%,0);
+      transform-origin: bottom center;
+      transition: opacity .4s,visibility 1ms .4s,color .4s,transform .4s;
+      visibility: hidden;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0;
+    bottom: 2px;
+    right: 0;
+    background-color: var(--primary);
+    transition: 0.4s ease-in-out;
+  }
+  &:hover{
+    div>span:first-child{
+      opacity: 0;
+      visibility: hidden;
+      transform: rotateX(90deg) translate3d(0,-100%,0);
+      -webkit-transform: rotateX(90deg) translate3d(0,-100%,0);
+      transition: opacity .4s,visibility 1ms .4s,color .4s,transform .4s;
+    }
+    div>span:nth-child(2){
+      opacity: 1;
+      visibility: visible;
+      transform: rotateX(0deg) translate3d(0,0,0);
+      -webkit-transform: rotateX(0deg) translate3d(0,0%,0);
+      transition: opacity .4s,color .4s,transform .4s;
+    }
+    &:before{
+      transition: 0.4s ease-in-out;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary);
+    }
+  }
+}
+
+.cursor_follower{
+  position: fixed;
+  z-index: 99999;
+  top: 0px;
+  left: 0px;
+  border-radius: 100%;
+  background: #FFFF19;
+  width: var(--4m);
+  aspect-ratio: 1;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  @media only screen and (max-width: 500px){
+    display: none;
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: auto;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: auto;
+}
+
+.border{
+  border: var(--border) !important;
+}
+
+.border-radius{
+  border-radius: var(--1m);
+}
+
+.w100{
+  width: 100%;
+}
+
+.dnone{
+  display: none !important;
+}
+
+.dflex{
+  display: flex !important;
+}
+.dflexrow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dflexcolumn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.p16{
+  padding: var(--2m);
+}
+
+.gap8{
+  gap: var(--1m);
+  @media only screen and (max-width: 900px){
+    gap: var(--05m);
+  }
+}
+.gap16{
+  gap: var(--2m);
+  @media only screen and (max-width: 900px){
+    gap: var(--1m);
+  }
+}
+.gap32{
+  gap: var(--4m);
+  @media only screen and (max-width: 900px){
+    gap: var(--3m);
+  }
+}
+.gap64{
+  gap: var(--8m);
+  @media only screen and (max-width: 900px){
+    gap: var(--6m);
+  }
+}
+
+.disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  color: var(--grey);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
