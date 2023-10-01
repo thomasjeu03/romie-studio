@@ -47,8 +47,9 @@ figure{
 p{
   white-space: pre-line;
 }
-Link{
+Link, a{
   cursor: pointer;
+  width: fit-content;
   color: var(--primary);
 }
 input,textarea, .input,select{
@@ -73,10 +74,6 @@ button{
 }
 li{
   list-style-type: none;
-}
-a{
-  width: fit-content;
-  color: var(--primary);
 }
 .noise{
   background-image: url(../../../src/assets/img/noise.png);

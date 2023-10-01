@@ -116,11 +116,11 @@
 .cursor_follower{
   position: fixed;
   z-index: 99999;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   border-radius: 100%;
-  background: #FFFF19;
-  width: var(--4m);
+  background: #00d5ed;
+  width: var(--3m);
   aspect-ratio: 1;
   pointer-events: none;
   mix-blend-mode: difference;

@@ -5,16 +5,10 @@
   --lighter: .4;
 
   /*Primary color*/
-  --primary-rgb: 0,0,230;
+  --primary-rgb: 253,67,17;
   --primary: rgb(var(--primary-rgb));
   --primary-light: rgb(var(--primary-rgb), var(--light));
   --primary-lighter: rgb(var(--primary-rgb), var(--lighter));
-
-  /*Secondary color*/
-  --secondary-rgb: 229,209,203;
-  --secondary: rgb(var(--secondary-rgb));
-  --secondary-light: rgb(var(--secondary-rgb), var(--light));
-  --secondary-lighter: rgb(var(--secondary-rgb), var(--lighter));
 
   /*Black color*/
   --black-rgb: 24,26,24;
@@ -23,13 +17,13 @@
   --black-lighter: rgb(var(--black-rgb), var(--lighter));
 
   /*White color*/
-  --white-rgb: 230, 230, 230;
+  --white-rgb: 247, 248, 247;
   --white: rgb(var(--white-rgb));
   --white-light: rgb(var(--white-rgb), var(--light));
   --white-lighter: rgb(var(--white-rgb), var(--lighter));
 
   /*Grey color*/
-  --grey-rgb: 184, 184, 184;
+  --grey-rgb: 217, 217, 217;
   --grey: rgb(var(--grey-rgb));
   --grey-light: rgb(var(--grey-rgb), var(--light));
   --grey-lighter: rgb(var(--grey-rgb), var(--lighter));
@@ -47,11 +41,8 @@
   color: var(--black);
 }
 
-.primary, .blue{
+.primary, .red{
   color: var(--primary);
-}
-.secondary, .pink{
-  color: var(--secondary);
 }
 .disable, .grey{
   color: var(--grey);
