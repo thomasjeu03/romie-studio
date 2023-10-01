@@ -3,7 +3,7 @@ import '../style/pages/Home.scss'
 function HomePage() {
     return (
         <div className="HomePage">
-            <h1>Romie Studio</h1>
+            <h1 className="romie_title">ROMIE Studio</h1>
         </div>
     )
 }

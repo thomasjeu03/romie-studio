@@ -1,26 +1,19 @@
 @font-face {
-  font-family: 'Fantome';
-  src: url('../../../src/assets/fonts/Fantome.otf') format('opentype');
+  font-family: 'Romie';
+  src: url('../../../src/assets/fonts/Romie-Regular.otf') format('opentype');
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
-  font-family: 'ClashDisplay';
-  src: url('../../../src/assets/fonts/ClashDisplay.otf') format('opentype');
+  font-family: 'Neue Montreal';
+  src: url('../../../src/assets/fonts/NeueMontreal-Regular.otf') format('opentype');
   font-style: normal;
-  font-display: swap
-}
-@font-face {
-  font-family: 'NeueHaasDisplay';
-  src: url('../../../src/assets/fonts/NeueHaasDisplay.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 :root{
-  --aesthetic-font: 'Fantome', serif;
-  --title-font: 'ClashDisplay', serif;
-  --text-font: 'NeueHaasDisplay' , serif;
+  --title-font: 'Romie', serif;
+  --text-font: 'Neue Montreal' , sans-serif;
 
   --font-size: 16px;
   @media only screen and (max-width: 900px){
@@ -28,12 +21,12 @@
   }
 }
 
-.aesthetic_title{
-  font-family: var(--aesthetic-font);
-  text-transform: uppercase;
-  font-size: var(--6m);
+.titre1, h1{
+  font-size: 15.7vw;
   line-height: normal;
   text-align: center;
+  font-family: var(--title-font);
+  font-weight: 100;
 }
 
 .titre2, h2{
@@ -47,9 +40,6 @@
   font-family: var(--title-font);
 }
 @media only screen and (max-width: 900px){
-  .aesthetic_title{
-    font-size: var(--5m);
-  }
   .titre2, h2{
     font-size: var(--5m);
   }
@@ -58,9 +48,6 @@
   }
 }
 @media only screen and (max-width: 600px){
-  .aesthetic_title{
-    font-size: var(--4m);
-  }
   .titre2, h2{
     font-size: var(--4m);
   }
