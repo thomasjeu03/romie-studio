@@ -6,6 +6,12 @@
   gap: var(--4m);
   width: 100%;
   #hero{
+    height: calc(100vh - 12vw - var(--10m));
+    min-height: 400px;
+    @media only screen and (max-width: 900px){
+      height: auto;
+      min-height: auto;
+    }
     .left{
       display: flex;
       flex-direction: column;
